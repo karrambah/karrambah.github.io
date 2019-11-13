@@ -1,0 +1,122 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background:#F400C2;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+	/*farbe der box*/
+	background: #fff;
+	/*weite der box*/
+	width: 90%;
+	/*margin auto schiebt es in die mitte*/
+	margin: 2rem auto;
+}
+
+
+/*wenn mann h1 nicht definiert, dann bleibt es klein und unbedeutend*/
+h1{
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+	padding-top: 10px;
+}
+p{
+	text-align: center;
+	padding: 5px;
+}
+
+.tiere{
+	margin: 5px;
+	position: relative;
+}
+
+/*text, der nur in der row ist. standardposition heisst:
+static, hier probieren wir mal rum*/
+.row p{
+	position:absolute;
+	background-color: pink;
+	padding:5px;
+}
+
+.row{
+	display: flex;
+	width: 80%;
+	margin: auto;
+}
+
+#hund{
+	bottom:0px;
+	left:0px;
+	/*achsen verteilen, x, y und mit z in den raum hinein, also
+	ebenen*/
+	z-index:3;
+}
+
+#katze{
+	bottom:0px;
+	right:0px;
+	z-index:3;
+}
+
+#maus{
+	top:0px;
+	right:0px;
+	z-index:3;
+}
+
+#huhn{
+	top:0px;
+	left:0px;
+	z-index:3;
+}
+
+span{
+	background:#ddd;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+	z-index:2;
+}
+
+.hund{
+	bottom:0;
+	left:0;
+	background:#0CEBC2;
+	width:150px;
+	height:150px;
+}
+
+.katze{
+	width:100px;
+	height:100px;
+	bottom:0;
+	right:0;
+	background:#96EB91;
+}
+
+.maus{
+	width:70px;
+	height:70px;
+	top:0;
+	right:0;
+	background:#EBA958;
+}
+
+.huhn{
+	width:80px;
+	height:80px;
+	top:0;
+	left:0;
+	background:#EB58E5;
+}
+
+/*wenn man img anwählt und dann weite 100%, dann skalieren sie immer
+nur so viel, wie sie eben platz haben, da zu 100%*/
+
+.tiere img{
+	width:100%;
+}
